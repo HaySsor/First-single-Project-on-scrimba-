@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card";
+import classes from "./App.module.css";
+import Footer from "./components/Footer";
+import Info from "./components/Info";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className={classes.container}>
+			<Card />
+			<Info
+				title="About"
+				text=" I am a frontend developer with a particular interest in making things simple and automating daily tasks. I try to keep up with security and best practices, and am always looking for new things to learn."
+			/>
+			<Info
+				title="Interests"
+				text="Food expert. Music scholar. Reader. Internet fanatic. Bacon buff.
+				Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic."
+			/>
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
